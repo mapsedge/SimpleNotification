@@ -1,4 +1,4 @@
-# SimpleNotification
+# SimpleNotification v.1.3.5
 
 *SimpleNotification* is a library to display simple yet customizable notifications. 
 You can stylize text with a simple syntax, add buttons to make the notifications interactable and add callbacks for some events during the life of a notification. 
