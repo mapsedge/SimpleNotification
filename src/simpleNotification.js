@@ -1,9 +1,12 @@
+// VERSION 1.3.5
+// Version numbers are all over the map in the original code, so I'm just starting at 1.3.5 - Bill
+;
 /**
  * @typedef {('top-left' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right')} Position
  */
 
 /**
- * @typedef {('success' | 'info' | 'error' | 'warning' | 'message')} Type
+ * @typedef {('success' | 'info' | 'error' | 'warning' | 'stickyNote' | 'message')} Type
  */
 
 /**
@@ -25,6 +28,7 @@
  * @type {object}
  * @property {('fadeout' | 'scaleout' | 'rotateout')} name
  * @property {number} duration in ms
+ * 
  */
 
 /**
@@ -468,7 +472,7 @@ export default class SimpleNotification {
 
 	/**
 	 * Set the type of the notification
-	 * success, info, error, warning, message
+	 * success, info, error, warning, message, stickyNote
 	 * It can be another CSS class but `type` will be prepended with `gn-`
 	 * @param {Type} type
 	 */
@@ -798,6 +802,16 @@ export default class SimpleNotification {
 	 */
 	static error(content, options = {}) {
 		return this.create(['gn-error'], content, options);
+	}
+
+	/**
+	 * Create a notification with the 'stickyNote' style
+	 * @param {Content} content Content of the notification
+	 * @param {Partial<Options>} options Options used for the notification
+	 * @returns {SimpleNotification}
+	 */
+	static stickyNote(content, options = {}) {
+		return this.create(['gn-stickyNote'], content, options);
 	}
 
 	/**
