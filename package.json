@@ -1,6 +1,6 @@
 {
 	"name": "simplenotification",
-	"version": "1.0.0",
+	"version": "1.3.5",
 	"description": "Display Simple Toast Notifications in vanilla JavaScript.",
 	"main": "src/SimpleNotification.js",
 	"scripts": {
